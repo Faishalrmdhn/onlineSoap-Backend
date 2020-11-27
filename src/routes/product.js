@@ -18,7 +18,7 @@ const {
 } = require("../middleware/redis");
 const uploadImage = require("../middleware/multer");
 
-router.get("/", authorization, getProductRedis, getAllProduct);
+router.get("/", authorization, getAllProduct); // getProductRedis
 router.get("/:id", authorization, getProductByIdRedis, getProductById);
 router.get("/search/name", authorization, getProductByName);
 
